@@ -1,14 +1,29 @@
-# Tutorial: Run scripts on every page
+# LinkedIn Helper
 
-This sample demonstrates how to run scripts on any Chrome extension and Chrome Web Store documentation page using an extension called _Reading Time_.
+A basic Chrome extension that improves the search experience for jobs on LinkedIn.
 
-## Overview
+When on the LinkedIn Job Search page (with all the header filters), all job cards that are either Viewed or Saved are hidden upon trigger (current trigger is just pressing the "h" key on your keyboard).
 
-This sample demonstrates how developers can use content scripts which employ Document Object Models to read and change the content of a page. In this instance, the extension checks to find an article element, counts all the words inside of it, and then creates a paragraph that estimates the total reading time for that article.
+This was made in less than a day and is my first Chrome extension, so apologies if it's janky. Feel free to fork and add improvements!
 
-## Running this extension
+Potential future updates:
+- trigger hide when loading the page
+- trigger hide when scrolling and more jobs appear
+- trigger hide when clicking away from a job, maybe?
 
-1. Clone this repository.
-2. Load this directory in Chrome as an [unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
-3. Navigate to a Chrome extension or Chrome Webstore documentation page with an article element. [Here](https://developer.chrome.com/docs/webstore/publish) is an example of a webpage with an article element.
-4. The extension will provide an estimated reading time for the text in that article element. Here is the [link](https://developer.chrome.com/docs/extensions/get-started/tutorial/scripts-on-every-tab) for the full instructions.
+- save links to viewed jobs; allow that to be viewable
+
+- add an option within hello.html to turn off the plugin and/or re-show hidden job cards
+
+- allow hide based on Viewed, Applied, or Promoted
+- hide by either removing entirely (style="display:none"), or by displaying a blank card instead, or by adding a grey overlay to the card
+
+## Installation
+
+To experiment with these samples, please clone this repo and use 'Load Unpacked Extension'.
+Read more on [Development Basics](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
+
+## Contributing
+
+TBD
+
