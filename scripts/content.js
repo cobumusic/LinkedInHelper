@@ -37,6 +37,10 @@ document.addEventListener('keydown', function(event) {
 
 function hideAll(){
 
+	var hideViewed = true;
+	var hideApplied = true;
+	var hideSaved = true;
+
 	//find all DOM elements that are job postings AND that contain "viewed"
 	//search within <ul class="scaffold-layout__list-container">
 	//or, search for anything with class="job-card-container--clickable"
@@ -48,13 +52,21 @@ function hideAll(){
 		//if the above does exist, see if it contains Viewed or Applied
 		if (footerWrappers.length != 0){
 			var footerInsides = footerWrappers[0].innerHTML;
-			if (footerInsides.includes("Viewed") || footerInsides.includes("Applied") ){				
+			if (
+				(footerInsides.includes("Viewed") && hideViewed) 
+				|| (footerInsides.includes("Applied") && hideApplied) 
+				|| (footerInsides.includes("Saved") && hideSaved) 
+			){				
 				//hide the job card:
 				//get grandparent of card
 				var grandparent = card.parentElement.parentElement;
 				//add style="display:none" if it doesn't already exist 
 				//can do x.style.display = "none";
 				grandparent.style.display = "none";
+			}
+			else {//display otherwise
+				var grandparent = card.parentElement.parentElement;
+				grandparent.style.display = "block";
 			}
 		}
 		
