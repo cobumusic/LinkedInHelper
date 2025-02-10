@@ -1,8 +1,16 @@
 // document.addEventListener('keydown', function(event) {
 	// console.log("hello");
 // });
-console.log("hello");
 // console.log(document.getElementById("viewedCheckbox").checked);
+
+
+// chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+  // console.log("Send");
+  // chrome.tabs.sendMessage(tabs[0].id, "message", (response) => {
+    // console.log("received response");
+	// console.log("Recv response = " + response.title);
+  // });
+// });
 
 // chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
   // console.log("Send");

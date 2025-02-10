@@ -25,5 +25,5 @@ Read more on [Development Basics](https://developer.chrome.com/docs/extensions/m
 
 ## UPDATES
 
-02/10/2025: Added toggle buttons, made extension popup actually usable
+02/10/2025: Added toggle buttons (don't do anything); trying to figure out how to set/get variables between content script (content.js) and extension popup (hello.html)
 

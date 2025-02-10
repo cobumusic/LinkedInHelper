@@ -34,8 +34,7 @@ TODO
 	// });  
 	
 	
-console.log("matches.js");
-
+//console.log("matches.js");
 // chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   // console.log("Recv. Send response = " + document.title);
   // sendResponse({ title: document.title });
@@ -43,9 +42,22 @@ console.log("matches.js");
   // return true;
 // });
 
+
+
+
 var hideViewed = true;
 var hideApplied = true;
 var hideSaved = true;
+
+
+// console.log("matches.js");
+// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  // console.log("Recv. Send response = ");
+  // sendResponse({ title: hideSaved });
+
+  // return true;
+// });
+
 
 document.addEventListener('keydown', function(event) {
     if(event.keyCode == 72) {
@@ -58,7 +70,7 @@ function hideAll(){
 
 
 	//MOST IMPORTANT TODO: figure out how to get/set variables between this file and hello.html, so the checkboxes there can be set onload, and so filters here can be set
-
+	//maybe look up developer.chrome docs, look into what service workers do
 
 	//TODO get current state of checkboxes
 	// var currHideViewed = document.getElementById("viewedCheckbox").checked;

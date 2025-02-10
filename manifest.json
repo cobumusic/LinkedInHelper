@@ -10,10 +10,7 @@
     "48": "images/LinkedIn_Filter_48.png",
     "128": "images/LinkedIn_Filter_128.png"
   },
-  "background": {
-    "service_worker": "scripts/popup.js",
-	"type": "module"
-  },
+
   "content_scripts": [
     {
       "js": ["scripts/content.js"],
@@ -23,6 +20,9 @@
 		"https://www.linkedin.com/jobs/search/*"
       ]
     }
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "action": {
     "default_popup": "hello.html",
