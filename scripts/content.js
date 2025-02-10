@@ -28,6 +28,25 @@ TODO
 - hide by either removing entirely (style="display:none") or by displaying a blank card instead or by adding a grey overlay
 */
 
+
+	// chrome.runtime.sendMessage({ action: "getPopupData" }, function(response) {
+	  // console.log("Popup data received:", response.data);
+	// });  
+	
+	
+console.log("matches.js");
+
+// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  // console.log("Recv. Send response = " + document.title);
+  // sendResponse({ title: document.title });
+
+  // return true;
+// });
+
+var hideViewed = true;
+var hideApplied = true;
+var hideSaved = true;
+
 document.addEventListener('keydown', function(event) {
     if(event.keyCode == 72) {
 		//alert('h was pressed');
@@ -37,9 +56,18 @@ document.addEventListener('keydown', function(event) {
 
 function hideAll(){
 
-	var hideViewed = true;
-	var hideApplied = true;
-	var hideSaved = true;
+
+	//MOST IMPORTANT TODO: figure out how to get/set variables between this file and hello.html, so the checkboxes there can be set onload, and so filters here can be set
+
+
+	//TODO get current state of checkboxes
+	// var currHideViewed = document.getElementById("viewedCheckbox").checked;
+	// var currHideApplied = document.getElementById("appliedCheckbox").checked;
+	// var currHideSaved = document.getElementById("savedCheckbox").checked;
+	
+	//TODO save state of checkboxes after popup is closed
+	
+	//alert("hideViewed is " + currHideViewed + ", hideApplied is " + currHideApplied + ", hideSaved is " + currHideSaved);
 
 	//find all DOM elements that are job postings AND that contain "viewed"
 	//search within <ul class="scaffold-layout__list-container">
